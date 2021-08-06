@@ -1,0 +1,10 @@
+version: "3.2"
+services:
+  postgres:
+    container_name: databases
+    image: lmmdock/postgres-multi
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USERS=admin1:admin1
+      - POSTGRES_DATABASES=patients:admin1
